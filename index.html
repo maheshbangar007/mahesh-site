@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>GOLDSNKE</title>
-
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
@@ -15,6 +14,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: #050505;
@@ -22,7 +25,7 @@
             min-height: 100vh;
         }
 
-        /* TOP BAR */
+        /* NAVBAR */
         .navbar {
             height: 75px;
             width: 100%;
@@ -41,19 +44,11 @@
             font-size: 28px;
             font-weight: bold;
             letter-spacing: 5px;
-
-            background: linear-gradient(
-                90deg,
-                #00ffff,
-                #7b5cff,
-                #00ffff
-            );
-
+            background: linear-gradient(90deg, #00ffff, #7b5cff, #00ffff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* NAVIGATION */
         .nav-links {
             margin-left: auto;
             display: flex;
@@ -73,7 +68,7 @@
             text-shadow: 0 0 12px #00ffff;
         }
 
-        /* WELCOME SECTION */
+        /* WELCOME */
         .welcome {
             min-height: 100vh;
             display: flex;
@@ -88,13 +83,7 @@
             font-size: 70px;
             letter-spacing: 8px;
             margin-bottom: 20px;
-
-            background: linear-gradient(
-                90deg,
-                #00ffff,
-                #7b5cff
-            );
-
+            background: linear-gradient(90deg, #00ffff, #7b5cff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -129,24 +118,146 @@
             box-shadow: 0 0 25px #00ffff;
         }
 
+        /* ROBOT CONTROL */
+        .robot-control {
+            min-height: 100vh;
+            padding: 110px 20px 60px;
+            text-align: center;
+            background: #030303;
+        }
+
+        .robot-control h2 {
+            color: #00ffff;
+            font-size: 30px;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #ff3333;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        /* BLUETOOTH BUTTON */
+        .connect-btn {
+            margin-bottom: 35px;
+            padding: 13px 28px;
+            border: 1px solid #00ffff;
+            border-radius: 25px;
+            background: #080808;
+            color: #00ffff;
+            cursor: pointer;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .connect-btn:hover {
+            background: #00ffff;
+            color: #000;
+            box-shadow: 0 0 20px #00ffff;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .controls button {
+            width: 70px;
+            height: 70px;
+            margin: 7px;
+            border: 1px solid #00ffff;
+            border-radius: 15px;
+            background: #080808;
+            color: white;
+            font-size: 26px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .controls button:hover {
+            background: #00ffff;
+            color: black;
+            box-shadow: 0 0 20px #00ffff;
+        }
+
+        .controls button:active {
+            transform: scale(0.9);
+        }
+
+        .controls .stop {
+            border-color: #ff3333;
+        }
+
+        .controls .stop:hover {
+            background: #ff3333;
+            color: white;
+            box-shadow: 0 0 20px #ff3333;
+        }
+
+        /* COMMAND DISPLAY */
+        .command-box {
+            margin: 35px auto 0;
+            padding: 15px;
+            max-width: 350px;
+            border: 1px solid #222;
+            border-radius: 10px;
+            color: #00ffff;
+            background: #080808;
+        }
+
+        /* SPEED */
+        .speed {
+            margin: 40px auto;
+            max-width: 350px;
+        }
+
+        .speed label {
+            display: block;
+            color: #aaa;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .speed input {
+            width: 100%;
+            accent-color: #00ffff;
+        }
+
+        #speedValue {
+            color: #00ffff;
+            font-weight: bold;
+        }
+
         /* MOBILE */
         @media (max-width: 600px) {
 
             .navbar {
-                padding: 0 20px;
+                padding: 0 15px;
             }
 
             .logo-text {
-                font-size: 21px;
-                letter-spacing: 4px;
+                font-size: 19px;
+                letter-spacing: 3px;
             }
 
             .nav-links {
-                gap: 12px;
+                gap: 10px;
             }
 
             .nav-links a {
-                font-size: 10px;
+                font-size: 9px;
                 letter-spacing: 1px;
             }
 
@@ -156,6 +267,15 @@
 
             .welcome h2 {
                 font-size: 22px;
+            }
+
+            .robot-control h2 {
+                font-size: 23px;
+            }
+
+            .controls button {
+                width: 60px;
+                height: 60px;
             }
         }
     </style>
@@ -172,7 +292,7 @@
 
         <div class="nav-links">
             <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
+            <a href="#robot">ROBOT</a>
             <a href="#projects">PROJECTS</a>
             <a href="#contact">CONTACT</a>
         </div>
@@ -192,11 +312,117 @@
             technology, creativity and innovation.
         </p>
 
-        <a href="#about" class="button">
-            ENTER
+        <a href="#robot" class="button">
+            ENTER ROBOT CONTROL
         </a>
 
     </section>
+
+
+    <!-- ROBOT CONTROL -->
+    <section class="robot-control" id="robot">
+
+        <h2>🤖 ROBOT CONTROL</h2>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            <span id="bluetoothStatus">BLUETOOTH: DISCONNECTED</span>
+        </div>
+
+        <!-- BLUETOOTH CONNECT BUTTON -->
+        <button class="connect-btn" onclick="connectBluetooth()">
+            🔵 CONNECT BLUETOOTH
+        </button>
+
+        <div class="controls">
+
+            <div>
+                <button onclick="sendCommand('FORWARD')">⬆️</button>
+            </div>
+
+            <div>
+                <button onclick="sendCommand('LEFT')">⬅️</button>
+
+                <button class="stop" onclick="sendCommand('STOP')">
+                    ⏹
+                </button>
+
+                <button onclick="sendCommand('RIGHT')">➡️</button>
+            </div>
+
+            <div>
+                <button onclick="sendCommand('BACKWARD')">⬇️</button>
+            </div>
+
+        </div>
+
+
+        <div class="command-box">
+            COMMAND: <span id="command">READY</span>
+        </div>
+
+
+        <div class="speed">
+
+            <label>
+                ⚡ SPEED:
+                <span id="speedValue">50</span>%
+            </label>
+
+            <input
+                id="speed"
+                type="range"
+                min="0"
+                max="100"
+                value="50"
+                oninput="changeSpeed(this.value)"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function sendCommand(command) {
+
+            document.getElementById("command").textContent = command;
+
+            console.log("Robot Command:", command);
+        }
+
+
+        function changeSpeed(value) {
+
+            document.getElementById("speedValue").textContent = value;
+
+            console.log("Robot Speed:", value);
+        }
+
+
+        /* BLUETOOTH */
+        function connectBluetooth() {
+
+            if (!navigator.bluetooth) {
+
+                alert(
+                    "Bluetooth is not supported in this browser."
+                );
+
+                return;
+            }
+
+            alert(
+                "Bluetooth connection will be connected when the robot hardware arrives."
+            );
+
+            document.getElementById("bluetoothStatus").textContent =
+                "BLUETOOTH: READY TO CONNECT";
+        }
+
+    </script>
 
 </body>
 </html>
