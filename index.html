@@ -562,6 +562,243 @@
             }
         }
 
+    
+/* ===== FINAL RESPONSIVE FIX ===== */
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    max-width: 100%;
+}
+
+.navbar {
+    padding: 0 30px;
+}
+
+.nav-links {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .logo-text {
+        font-size: 23px;
+        letter-spacing: 4px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .welcome h1 {
+        font-size: 58px;
+    }
+
+    .speedometer {
+        width: min(330px, 82vw);
+        height: min(330px, 82vw);
+    }
+
+    .speed-arc {
+        width: calc(min(330px, 82vw) - 60px);
+        height: calc(min(330px, 82vw) - 60px);
+        left: 25px;
+        top: 25px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .navbar {
+        height: auto;
+        min-height: 64px;
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .logo-text {
+        flex-shrink: 0;
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    .nav-links {
+        margin-left: auto;
+        gap: 8px 10px;
+        align-items: center;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+        letter-spacing: .5px;
+        white-space: nowrap;
+    }
+
+    .welcome {
+        min-height: 100svh;
+        padding: 90px 16px 35px;
+    }
+
+    .welcome h1 {
+        font-size: clamp(38px, 13vw, 52px);
+        letter-spacing: 5px;
+    }
+
+    .welcome h2 {
+        font-size: 21px;
+    }
+
+    .welcome p {
+        font-size: 15px;
+        max-width: 92%;
+    }
+
+    .button {
+        padding: 13px 22px;
+        font-size: 13px;
+    }
+
+    .robot-control,
+    .speed-section,
+    .battery-section {
+        min-height: auto;
+        padding: 90px 14px 70px;
+    }
+
+    .robot-control h2,
+    .speed-section h2,
+    .battery-section h2 {
+        font-size: 21px;
+        letter-spacing: 2px;
+    }
+
+    .status {
+        font-size: 13px;
+    }
+
+    .connect-btn {
+        padding: 12px 20px;
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .controls button {
+        width: 62px;
+        height: 62px;
+        margin: 5px;
+        font-size: 23px;
+    }
+
+    .command-box {
+        width: min(350px, 92vw);
+        font-size: 13px;
+    }
+
+    .speedometer {
+        width: min(310px, 82vw);
+        height: min(310px, 82vw);
+    }
+
+    .speed-arc {
+        width: calc(min(310px, 82vw) - 56px);
+        height: calc(min(310px, 82vw) - 56px);
+        left: 24px;
+        top: 24px;
+    }
+
+    .live-speed {
+        top: 48%;
+    }
+
+    .live-speed-number {
+        font-size: clamp(34px, 11vw, 45px);
+    }
+
+    .speed-control {
+        width: min(400px, 92vw);
+        margin-top: 35px;
+    }
+
+    .battery-box {
+        width: min(320px, 92vw);
+        padding: 28px 18px;
+    }
+
+    .battery-icon {
+        width: min(210px, 68vw);
+        height: 90px;
+    }
+
+    .battery-percent {
+        font-size: 45px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+
+    .navbar {
+        align-items: flex-start;
+    }
+
+    .logo-text {
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        padding-top: 2px;
+    }
+
+    .nav-links {
+        gap: 6px 8px;
+    }
+
+    .nav-links a {
+        font-size: 7px;
+    }
+
+    .welcome {
+        padding-top: 105px;
+    }
+
+    .controls button {
+        width: 56px;
+        height: 56px;
+        margin: 4px;
+    }
+
+    .speedometer {
+        width: min(285px, 80vw);
+        height: min(285px, 80vw);
+    }
+
+    .speed-arc {
+        width: calc(min(285px, 80vw) - 50px);
+        height: calc(min(285px, 80vw) - 50px);
+        left: 21px;
+        top: 21px;
+    }
+
+    .battery-box {
+        width: 94vw;
+    }
+}
+
     </style>
 </head>
 
