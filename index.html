@@ -41,9 +41,36 @@
             font-size: 28px;
             font-weight: bold;
             letter-spacing: 5px;
-            background: linear-gradient(90deg, #00ffff, #7b5cff, #00ffff);
+
+            background: linear-gradient(
+                90deg,
+                #00ffff,
+                #7b5cff,
+                #00ffff
+            );
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* NAVIGATION */
+        .nav-links {
+            margin-left: auto;
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00ffff;
+            text-shadow: 0 0 12px #00ffff;
         }
 
         /* WELCOME SECTION */
@@ -61,7 +88,13 @@
             font-size: 70px;
             letter-spacing: 8px;
             margin-bottom: 20px;
-            background: linear-gradient(90deg, #00ffff, #7b5cff);
+
+            background: linear-gradient(
+                90deg,
+                #00ffff,
+                #7b5cff
+            );
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -96,9 +129,25 @@
             box-shadow: 0 0 25px #00ffff;
         }
 
+        /* MOBILE */
         @media (max-width: 600px) {
+
             .navbar {
                 padding: 0 20px;
+            }
+
+            .logo-text {
+                font-size: 21px;
+                letter-spacing: 4px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 10px;
+                letter-spacing: 1px;
             }
 
             .welcome h1 {
@@ -114,11 +163,26 @@
 
 <body>
 
+    <!-- NAVBAR -->
     <div class="navbar">
-        <div class="logo-text">GOLDSNKE</div>
+
+        <div class="logo-text">
+            GOLDSNKE
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+
     </div>
 
-    <section class="welcome">
+
+    <!-- WELCOME -->
+    <section class="welcome" id="home">
+
         <h1>WELCOME</h1>
 
         <h2>Welcome to GOLDSNKE</h2>
@@ -128,7 +192,10 @@
             technology, creativity and innovation.
         </p>
 
-        <a href="#" class="button">ENTER</a>
+        <a href="#about" class="button">
+            ENTER
+        </a>
+
     </section>
 
 </body>
