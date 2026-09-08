@@ -3,14 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahesh Bangar</title>
+
+    <title>GOLDSNKE</title>
+
     <link rel="icon" type="image/png" href="logo.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #050505;
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* TOP BAR */
+        .navbar {
+            height: 75px;
+            width: 100%;
+            background: #0b0b0b;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            background: linear-gradient(90deg, #00ffff, #7b5cff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* WELCOME SECTION */
+        .welcome {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px 40px;
+        }
+
+        .welcome h1 {
+            font-size: 70px;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #00ffff, #7b5cff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .welcome h2 {
+            font-size: 28px;
+            font-weight: normal;
+            color: #cccccc;
+            margin-bottom: 15px;
+        }
+
+        .welcome p {
+            font-size: 17px;
+            color: #888;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .button {
+            margin-top: 35px;
+            padding: 14px 35px;
+            border: 1px solid #00ffff;
+            border-radius: 30px;
+            color: #00ffff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #00ffff;
+            color: #000;
+            box-shadow: 0 0 25px #00ffff;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .welcome h1 {
+                font-size: 42px;
+            }
+
+            .welcome h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Mahesh Bangar</h1>
-    <h2>Welcome to My Site</h2>
+    <div class="navbar">
+        <div class="logo-text">GOLDSNKE</div>
+    </div>
+
+    <section class="welcome">
+        <h1>WELCOME</h1>
+
+        <h2>Welcome to GOLDSNKE</h2>
+
+        <p>
+            Explore a modern digital experience designed with
+            technology, creativity and innovation.
+        </p>
+
+        <a href="#" class="button">ENTER</a>
+    </section>
 
 </body>
 </html>
