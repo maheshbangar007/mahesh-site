@@ -247,9 +247,6 @@
             margin-bottom: 35px;
         }
 
-
-        /* SPEEDOMETER */
-
         .speedometer {
             width: 330px;
             height: 330px;
@@ -274,9 +271,6 @@
             overflow: hidden;
         }
 
-
-        /* SPEED ARC */
-
         .speed-arc {
             position: absolute;
             width: 270px;
@@ -295,9 +289,6 @@
             transform: rotate(-45deg);
         }
 
-
-        /* TICKS */
-
         .tick {
             position: absolute;
             width: 3px;
@@ -307,9 +298,6 @@
             top: 23px;
             transform-origin: 50% 142px;
         }
-
-
-        /* NEEDLE */
 
         .needle {
             position: absolute;
@@ -334,9 +322,6 @@
             z-index: 5;
         }
 
-
-        /* CENTER */
-
         .needle-center {
             position: absolute;
 
@@ -356,18 +341,11 @@
             z-index: 10;
         }
 
-
-        /* DIGITAL SPEED */
-
         .live-speed {
             position: absolute;
-
             width: 100%;
-
             top: 165px;
-
             text-align: center;
-
             z-index: 8;
         }
 
@@ -394,9 +372,6 @@
             margin-top: 8px;
         }
 
-
-        /* SPEED SLIDER */
-
         .speed-control {
             margin: 50px auto 0;
             max-width: 400px;
@@ -410,6 +385,111 @@
         }
 
         .speed-control input {
+            width: 100%;
+            accent-color: #00ffff;
+        }
+
+
+        /* BATTERY SECTION */
+
+        .battery-section {
+            min-height: 100vh;
+            padding: 110px 20px 70px;
+            background: #030303;
+            text-align: center;
+        }
+
+        .battery-section h2 {
+            color: #00ffff;
+            font-size: 30px;
+            letter-spacing: 4px;
+            margin-bottom: 45px;
+        }
+
+        .battery-box {
+            width: 320px;
+            margin: 0 auto;
+            padding: 35px 25px;
+            background: #080808;
+            border: 1px solid #222;
+            border-radius: 20px;
+            box-shadow:
+                0 0 25px rgba(0, 255, 255, 0.15);
+        }
+
+        .battery-icon {
+            width: 210px;
+            height: 100px;
+            border: 5px solid #00ffff;
+            border-radius: 15px;
+            margin: 20px auto 30px;
+            position: relative;
+            padding: 8px;
+            box-shadow:
+                0 0 20px #00ffff;
+        }
+
+        .battery-icon::after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 45px;
+            right: -20px;
+            top: 22px;
+            background: #00ffff;
+            border-radius: 0 5px 5px 0;
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        .battery-level {
+            height: 100%;
+            width: 80%;
+            background: linear-gradient(
+                90deg,
+                #00ffff,
+                #7b5cff
+            );
+            border-radius: 7px;
+            box-shadow:
+                0 0 15px #00ffff;
+            transition: width 0.4s ease;
+        }
+
+        .battery-percent {
+            font-size: 55px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 15px #00ffff;
+        }
+
+        .battery-label {
+            margin-top: 8px;
+            color: #00ffff;
+            letter-spacing: 4px;
+            font-size: 14px;
+        }
+
+        .charging-status {
+            margin-top: 25px;
+            color: #777;
+            letter-spacing: 2px;
+        }
+
+        .charging-dot {
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            background: #00ffff;
+            border-radius: 50%;
+            margin-right: 7px;
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        .battery-slider {
+            margin-top: 35px;
+        }
+
+        .battery-slider input {
             width: 100%;
             accent-color: #00ffff;
         }
@@ -445,7 +525,9 @@
                 font-size: 22px;
             }
 
-            .robot-control h2 {
+            .robot-control h2,
+            .speed-section h2,
+            .battery-section h2 {
                 font-size: 23px;
             }
 
@@ -469,6 +551,14 @@
             .needle {
                 height: 105px;
                 transform-origin: 50% 103px;
+            }
+
+            .battery-box {
+                width: 290px;
+            }
+
+            .battery-icon {
+                width: 190px;
             }
         }
 
@@ -495,7 +585,7 @@
 
             <a href="#speed">SPEED</a>
 
-            <a href="#contact">CONTACT</a>
+            <a href="#battery">BATTERY</a>
 
         </div>
 
@@ -608,9 +698,6 @@
 
             <div class="speed-arc"></div>
 
-
-            <!-- SPEED TICKS -->
-
             <div class="tick"
                  style="transform: rotate(-120deg);"></div>
 
@@ -639,8 +726,6 @@
                  style="transform: rotate(120deg);"></div>
 
 
-            <!-- NEEDLE -->
-
             <div
                 class="needle"
                 id="speedNeedle">
@@ -649,8 +734,6 @@
 
             <div class="needle-center"></div>
 
-
-            <!-- DIGITAL SPEED -->
 
             <div class="live-speed">
 
@@ -673,8 +756,6 @@
         </div>
 
 
-        <!-- DEMO SPEED CONTROL -->
-
         <div class="speed-control">
 
             <label>
@@ -685,13 +766,72 @@
             </label>
 
             <input
-                id="speed"
+                id="speedSlider"
                 type="range"
                 min="0"
                 max="100"
                 value="0"
                 oninput="changeSpeed(this.value)"
             >
+
+        </div>
+
+    </section>
+
+
+    <!-- BATTERY -->
+
+    <section class="battery-section" id="battery">
+
+        <h2>🔋 BATTERY STATUS</h2>
+
+
+        <div class="battery-box">
+
+            <div class="battery-icon">
+
+                <div
+                    class="battery-level"
+                    id="batteryLevel">
+                </div>
+
+            </div>
+
+
+            <div
+                class="battery-percent"
+                id="batteryPercent">
+                80%
+            </div>
+
+
+            <div class="battery-label">
+                BATTERY LEVEL
+            </div>
+
+
+            <div class="charging-status">
+
+                <span class="charging-dot"></span>
+
+                <span id="chargingText">
+                    POWER AVAILABLE
+                </span>
+
+            </div>
+
+
+            <div class="battery-slider">
+
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="80"
+                    oninput="changeBattery(this.value)"
+                >
+
+            </div>
 
         </div>
 
@@ -724,41 +864,59 @@
             document.getElementById("speedValue").textContent =
                 value;
 
-
-            /*
-                0%   = 0 km/h
-                100% = 120 km/h
-            */
-
             let speed =
                 Math.round(
                     (value / 100) * 120
                 );
 
-
             document.getElementById("liveSpeed").textContent =
                 speed;
-
-
-            /*
-                Needle range:
-                -120 degree = 0 km/h
-                +120 degree = 120 km/h
-            */
 
             let angle =
                 -120 + (value / 100) * 240;
 
-
             document.getElementById("speedNeedle").style.transform =
                 "rotate(" + angle + "deg)";
-
 
             console.log(
                 "Live Speed:",
                 speed,
                 "km/h"
             );
+        }
+
+
+        /* BATTERY */
+
+        function changeBattery(value) {
+
+            document.getElementById("batteryPercent")
+                .textContent = value + "%";
+
+            document.getElementById("batteryLevel")
+                .style.width = value + "%";
+
+
+            let chargingText =
+                document.getElementById("chargingText");
+
+
+            if (value <= 20) {
+
+                chargingText.textContent =
+                    "LOW BATTERY";
+
+            } else if (value <= 50) {
+
+                chargingText.textContent =
+                    "BATTERY AVAILABLE";
+
+            } else {
+
+                chargingText.textContent =
+                    "POWER AVAILABLE";
+            }
+
         }
 
 
