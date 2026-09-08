@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -26,6 +27,7 @@
         }
 
         /* NAVBAR */
+
         .navbar {
             height: 75px;
             width: 100%;
@@ -68,7 +70,9 @@
             text-shadow: 0 0 12px #00ffff;
         }
 
+
         /* WELCOME */
+
         .welcome {
             min-height: 100vh;
             display: flex;
@@ -118,7 +122,9 @@
             box-shadow: 0 0 25px #00ffff;
         }
 
+
         /* ROBOT CONTROL */
+
         .robot-control {
             min-height: 100vh;
             padding: 110px 20px 60px;
@@ -147,7 +153,9 @@
             margin-right: 8px;
         }
 
+
         /* BLUETOOTH BUTTON */
+
         .connect-btn {
             margin-bottom: 35px;
             padding: 13px 28px;
@@ -166,6 +174,9 @@
             color: #000;
             box-shadow: 0 0 20px #00ffff;
         }
+
+
+        /* CONTROL BUTTONS */
 
         .controls {
             display: flex;
@@ -206,7 +217,9 @@
             box-shadow: 0 0 20px #ff3333;
         }
 
+
         /* COMMAND DISPLAY */
+
         .command-box {
             margin: 35px auto 0;
             padding: 15px;
@@ -217,30 +230,193 @@
             background: #080808;
         }
 
-        /* SPEED */
-        .speed {
-            margin: 40px auto;
-            max-width: 350px;
+
+        /* SPEED SECTION */
+
+        .speed-section {
+            min-height: 100vh;
+            padding: 110px 20px 70px;
+            background: #050505;
+            text-align: center;
         }
 
-        .speed label {
+        .speed-section h2 {
+            color: #00ffff;
+            font-size: 30px;
+            letter-spacing: 4px;
+            margin-bottom: 35px;
+        }
+
+
+        /* SPEEDOMETER */
+
+        .speedometer {
+            width: 330px;
+            height: 330px;
+            margin: 0 auto;
+            border-radius: 50%;
+            position: relative;
+
+            background:
+                radial-gradient(
+                    circle,
+                    #111 0%,
+                    #080808 55%,
+                    #020202 100%
+                );
+
+            border: 5px solid #181818;
+
+            box-shadow:
+                0 0 20px #00ffff,
+                inset 0 0 35px #00ffff;
+
+            overflow: hidden;
+        }
+
+
+        /* SPEED ARC */
+
+        .speed-arc {
+            position: absolute;
+            width: 270px;
+            height: 270px;
+            left: 25px;
+            top: 25px;
+
+            border-radius: 50%;
+
+            border: 4px solid #222;
+
+            border-top-color: #00ffff;
+            border-left-color: #00ffff;
+            border-right-color: #7b5cff;
+
+            transform: rotate(-45deg);
+        }
+
+
+        /* TICKS */
+
+        .tick {
+            position: absolute;
+            width: 3px;
+            height: 15px;
+            background: #aaa;
+            left: 50%;
+            top: 23px;
+            transform-origin: 50% 142px;
+        }
+
+
+        /* NEEDLE */
+
+        .needle {
+            position: absolute;
+            width: 5px;
+            height: 125px;
+            background: #00ffff;
+
+            left: calc(50% - 2.5px);
+            top: 42px;
+
+            transform-origin: 50% 123px;
+            transform: rotate(-120deg);
+
+            border-radius: 5px;
+
+            box-shadow:
+                0 0 10px #00ffff,
+                0 0 20px #00ffff;
+
+            transition: transform 0.25s ease-out;
+
+            z-index: 5;
+        }
+
+
+        /* CENTER */
+
+        .needle-center {
+            position: absolute;
+
+            width: 25px;
+            height: 25px;
+
+            background: #00ffff;
+
+            border-radius: 50%;
+
+            left: calc(50% - 12.5px);
+            top: calc(50% - 12.5px);
+
+            box-shadow:
+                0 0 15px #00ffff;
+
+            z-index: 10;
+        }
+
+
+        /* DIGITAL SPEED */
+
+        .live-speed {
+            position: absolute;
+
+            width: 100%;
+
+            top: 165px;
+
+            text-align: center;
+
+            z-index: 8;
+        }
+
+        .live-speed-number {
+            font-size: 45px;
+            font-weight: bold;
+            color: #ffffff;
+
+            text-shadow:
+                0 0 10px #00ffff;
+        }
+
+        .kmh {
+            font-size: 15px;
+            letter-spacing: 4px;
+            color: #00ffff;
+            margin-top: 5px;
+        }
+
+        .live-text {
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: #777;
+            margin-top: 8px;
+        }
+
+
+        /* SPEED SLIDER */
+
+        .speed-control {
+            margin: 50px auto 0;
+            max-width: 400px;
+        }
+
+        .speed-control label {
             display: block;
             color: #aaa;
             margin-bottom: 15px;
             letter-spacing: 2px;
         }
 
-        .speed input {
+        .speed-control input {
             width: 100%;
             accent-color: #00ffff;
         }
 
-        #speedValue {
-            color: #00ffff;
-            font-weight: bold;
-        }
 
         /* MOBILE */
+
         @media (max-width: 600px) {
 
             .navbar {
@@ -277,13 +453,34 @@
                 width: 60px;
                 height: 60px;
             }
+
+            .speedometer {
+                width: 290px;
+                height: 290px;
+            }
+
+            .speed-arc {
+                width: 235px;
+                height: 235px;
+                left: 23px;
+                top: 23px;
+            }
+
+            .needle {
+                height: 105px;
+                transform-origin: 50% 103px;
+            }
         }
+
     </style>
 </head>
 
+
 <body>
 
+
     <!-- NAVBAR -->
+
     <div class="navbar">
 
         <div class="logo-text">
@@ -291,16 +488,22 @@
         </div>
 
         <div class="nav-links">
+
             <a href="#home">HOME</a>
+
             <a href="#robot">ROBOT</a>
-            <a href="#projects">PROJECTS</a>
+
+            <a href="#speed">SPEED</a>
+
             <a href="#contact">CONTACT</a>
+
         </div>
 
     </div>
 
 
     <!-- WELCOME -->
+
     <section class="welcome" id="home">
 
         <h1>WELCOME</h1>
@@ -320,53 +523,165 @@
 
 
     <!-- ROBOT CONTROL -->
+
     <section class="robot-control" id="robot">
 
         <h2>🤖 ROBOT CONTROL</h2>
 
         <div class="status">
+
             <span class="status-dot"></span>
-            <span id="bluetoothStatus">BLUETOOTH: DISCONNECTED</span>
+
+            <span id="bluetoothStatus">
+                BLUETOOTH: DISCONNECTED
+            </span>
+
         </div>
 
-        <!-- BLUETOOTH CONNECT BUTTON -->
+
         <button class="connect-btn" onclick="connectBluetooth()">
             🔵 CONNECT BLUETOOTH
         </button>
 
+
         <div class="controls">
 
             <div>
-                <button onclick="sendCommand('FORWARD')">⬆️</button>
+
+                <button onclick="sendCommand('FORWARD')">
+                    ⬆️
+                </button>
+
             </div>
 
-            <div>
-                <button onclick="sendCommand('LEFT')">⬅️</button>
 
-                <button class="stop" onclick="sendCommand('STOP')">
+            <div>
+
+                <button onclick="sendCommand('LEFT')">
+                    ⬅️
+                </button>
+
+                <button
+                    class="stop"
+                    onclick="sendCommand('STOP')">
                     ⏹
                 </button>
 
-                <button onclick="sendCommand('RIGHT')">➡️</button>
+                <button onclick="sendCommand('RIGHT')">
+                    ➡️
+                </button>
+
             </div>
 
+
             <div>
-                <button onclick="sendCommand('BACKWARD')">⬇️</button>
+
+                <button onclick="sendCommand('BACKWARD')">
+                    ⬇️
+                </button>
+
             </div>
 
         </div>
 
 
         <div class="command-box">
-            COMMAND: <span id="command">READY</span>
+
+            COMMAND:
+            <span id="command">
+                READY
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- SPEED -->
+
+    <section class="speed-section" id="speed">
+
+        <h2>⚡ LIVE SPEED</h2>
+
+
+        <div class="speedometer">
+
+            <div class="speed-arc"></div>
+
+
+            <!-- SPEED TICKS -->
+
+            <div class="tick"
+                 style="transform: rotate(-120deg);"></div>
+
+            <div class="tick"
+                 style="transform: rotate(-90deg);"></div>
+
+            <div class="tick"
+                 style="transform: rotate(-60deg);"></div>
+
+            <div class="tick"
+                 style="transform: rotate(-30deg);"></div>
+
+            <div class="tick"
+                 style="transform: rotate(0deg);"></div>
+
+            <div class="tick"
+                 style="transform: rotate(30deg);"></div>
+
+            <div class="tick"
+                 style="transform: rotate(60deg);"></div>
+
+            <div class="tick"
+                 style="transform: rotate(90deg);"></div>
+
+            <div class="tick"
+                 style="transform: rotate(120deg);"></div>
+
+
+            <!-- NEEDLE -->
+
+            <div
+                class="needle"
+                id="speedNeedle">
+            </div>
+
+
+            <div class="needle-center"></div>
+
+
+            <!-- DIGITAL SPEED -->
+
+            <div class="live-speed">
+
+                <div
+                    class="live-speed-number"
+                    id="liveSpeed">
+                    0
+                </div>
+
+                <div class="kmh">
+                    KM/H
+                </div>
+
+                <div class="live-text">
+                    LIVE SPEED
+                </div>
+
+            </div>
+
         </div>
 
 
-        <div class="speed">
+        <!-- DEMO SPEED CONTROL -->
+
+        <div class="speed-control">
 
             <label>
                 ⚡ SPEED:
-                <span id="speedValue">50</span>%
+                <span id="speedValue">
+                    0
+                </span>%
             </label>
 
             <input
@@ -374,7 +689,7 @@
                 type="range"
                 min="0"
                 max="100"
-                value="50"
+                value="0"
                 oninput="changeSpeed(this.value)"
             >
 
@@ -384,25 +699,71 @@
 
 
     <!-- JAVASCRIPT -->
+
     <script>
+
+
+        /* ROBOT COMMAND */
 
         function sendCommand(command) {
 
-            document.getElementById("command").textContent = command;
+            document.getElementById("command").textContent =
+                command;
 
-            console.log("Robot Command:", command);
+            console.log(
+                "Robot Command:",
+                command
+            );
         }
 
 
+        /* SPEED */
+
         function changeSpeed(value) {
 
-            document.getElementById("speedValue").textContent = value;
+            document.getElementById("speedValue").textContent =
+                value;
 
-            console.log("Robot Speed:", value);
+
+            /*
+                0%   = 0 km/h
+                100% = 120 km/h
+            */
+
+            let speed =
+                Math.round(
+                    (value / 100) * 120
+                );
+
+
+            document.getElementById("liveSpeed").textContent =
+                speed;
+
+
+            /*
+                Needle range:
+                -120 degree = 0 km/h
+                +120 degree = 120 km/h
+            */
+
+            let angle =
+                -120 + (value / 100) * 240;
+
+
+            document.getElementById("speedNeedle").style.transform =
+                "rotate(" + angle + "deg)";
+
+
+            console.log(
+                "Live Speed:",
+                speed,
+                "km/h"
+            );
         }
 
 
         /* BLUETOOTH */
+
         function connectBluetooth() {
 
             if (!navigator.bluetooth) {
@@ -418,9 +779,12 @@
                 "Bluetooth connection will be connected when the robot hardware arrives."
             );
 
-            document.getElementById("bluetoothStatus").textContent =
+            document.getElementById(
+                "bluetoothStatus"
+            ).textContent =
                 "BLUETOOTH: READY TO CONNECT";
         }
+
 
     </script>
 
