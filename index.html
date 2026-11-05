@@ -799,6 +799,130 @@ section {
     }
 }
 
+    
+
+        /* AI PRACTICALS */
+        .ai-practicals {
+            min-height: 100vh;
+            padding: 110px 7% 70px;
+            background: #050505;
+            text-align: center;
+        }
+        .ai-practicals h2 {
+            color: #00ffff;
+            font-size: 30px;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+        .ai-intro {
+            color: #888;
+            margin: 0 auto 35px;
+            line-height: 1.6;
+        }
+        .practical-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .practical-card {
+            background: #0d1117;
+            border: 1px solid #173b43;
+            border-radius: 14px;
+            padding: 22px;
+            transition: .25s;
+        }
+        .practical-card:hover {
+            border-color: #00ffff;
+            transform: translateY(-4px);
+            box-shadow: 0 0 18px #00ffff22;
+        }
+        .practical-number {
+            color: #00ffff;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .practical-card h3 {
+            color: #eee;
+            font-size: 17px;
+            line-height: 1.45;
+            min-height: 50px;
+            margin-bottom: 18px;
+        }
+        .pdf-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+        .pdf-actions a {
+            display: inline-block;
+            padding: 10px 14px;
+            border: 1px solid #00ffff;
+            border-radius: 22px;
+            color: #00ffff;
+            text-decoration: none;
+            font-size: 12px;
+            transition: .2s;
+        }
+        .pdf-actions a:hover { background: #00ffff; color: #000; }
+        @media (max-width: 700px) {
+            .navbar { height: auto; min-height: 75px; padding: 14px 18px; flex-wrap: wrap; gap: 12px; }
+            .nav-links { width: 100%; margin-left: 0; gap: 14px; flex-wrap: wrap; }
+            .nav-links a { font-size: 11px; }
+            .ai-practicals { padding: 145px 18px 55px; }
+            .ai-practicals h2 { font-size: 24px; }
+        }
+
+
+
+        /* TOTAL WEBSITE VISITORS */
+        .site-footer {
+            padding: 38px 20px 30px;
+            text-align: center;
+            background: #080808;
+            border-top: 1px solid #1c1c1c;
+        }
+
+        .visitor-counter-title {
+            color: #00ffff;
+            font-size: 13px;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .visitor-counter-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            min-width: 190px;
+            padding: 13px 22px;
+            border: 1px solid #00ffff;
+            border-radius: 14px;
+            background: #080f12;
+            box-shadow: 0 0 16px rgba(0, 255, 255, 0.10);
+            color: #fff;
+        }
+
+        .visitor-counter-icon {
+            color: #00ffff;
+            font-size: 22px;
+        }
+
+        .visitor-counter-box .counterapi {
+            color: #fff;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            min-width: 45px;
+        }
+
+        .visitor-counter-note {
+            color: #777;
+            font-size: 11px;
+            margin-top: 12px;
+            letter-spacing: 1px;
+        }
+
     </style>
 </head>
 
@@ -823,6 +947,8 @@ section {
             <a href="#speed">SPEED</a>
 
             <a href="#battery">BATTERY</a>
+
+            <a href="#ai-practicals">AI PRACTICALS</a>
 
         </div>
 
@@ -1182,6 +1308,35 @@ section {
 
 
     </script>
+
+
+
+    <!-- AI PRACTICALS -->
+    <section class="ai-practicals" id="ai-practicals">
+        <h2>📚 AI PRACTICALS</h2>
+        <p class="ai-intro">Third Year Computer Engineering · Artificial Intelligence Lab<br>View or download your practical reports below.</p>
+        <div class="practical-grid">
+            <article class="practical-card"><div class="practical-number">PRACTICAL 01</div><h3>Simple Reflex Agent – Vacuum Cleaner</h3><div class="pdf-actions"><a href="pdfs/practical-01-vacuum-cleaner.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-01-vacuum-cleaner.pdf" download>DOWNLOAD</a></div></article>
+            <article class="practical-card"><div class="practical-number">PRACTICAL 02</div><h3>Tower of Hanoi – BFS</h3><div class="pdf-actions"><a href="pdfs/practical-02-tower-of-hanoi-bfs.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-02-tower-of-hanoi-bfs.pdf" download>DOWNLOAD</a></div></article>
+            <article class="practical-card"><div class="practical-number">PRACTICAL 03</div><h3>Adversarial Search – Alpha-Beta Pruning</h3><div class="pdf-actions"><a href="pdfs/practical-03-alpha-beta-pruning.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-03-alpha-beta-pruning.pdf" download>DOWNLOAD</a></div></article>
+            <article class="practical-card"><div class="practical-number">PRACTICAL 04</div><h3>A* Search Algorithm – 8 Puzzle Problem</h3><div class="pdf-actions"><a href="pdfs/practical-04-a-star-8-puzzle.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-04-a-star-8-puzzle.pdf" download>DOWNLOAD</a></div></article>
+            <article class="practical-card"><div class="practical-number">PRACTICAL 05</div><h3>Intelligent Number-Guessing Agent</h3><div class="pdf-actions"><a href="pdfs/practical-05-number-guessing.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-05-number-guessing.pdf" download>DOWNLOAD</a></div></article>
+            <article class="practical-card"><div class="practical-number">PRACTICAL 06</div><h3>Simple Chatbot – Predefined Rules and Pattern Matching</h3><div class="pdf-actions"><a href="pdfs/practical-06-chatbot.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-06-chatbot.pdf" download>DOWNLOAD</a></div></article>
+            <article class="practical-card"><div class="practical-number">PRACTICAL 07</div><h3>DFS – Water Jug Problem Solving</h3><div class="pdf-actions"><a href="pdfs/practical-07-dfs-water-jug.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-07-dfs-water-jug.pdf" download>DOWNLOAD</a></div></article>
+        </div>
+    </section>
+
+
+    <!-- TOTAL WEBSITE VISITORS -->
+    <footer class="site-footer">
+        <div class="visitor-counter-title">TOTAL WEBSITE VISITS</div>
+        <div class="visitor-counter-box">
+            <span class="visitor-counter-icon" aria-hidden="true">👁</span>
+            <div class="counterapi" aria-label="Total website visits">Loading...</div>
+        </div>
+        <div class="visitor-counter-note">THANK YOU FOR VISITING GOLDSNKE</div>
+    </footer>
+    <script src="https://counterapi.com/c.js?ns=goldsnke.netlify.app" async></script>
 
 </body>
 </html>
