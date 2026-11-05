@@ -8,7 +8,6 @@
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +26,6 @@
         }
 
         /* NAVBAR */
-
         .navbar {
             height: 75px;
             width: 100%;
@@ -70,9 +68,7 @@
             text-shadow: 0 0 12px #00ffff;
         }
 
-
         /* WELCOME */
-
         .welcome {
             min-height: 100vh;
             display: flex;
@@ -122,9 +118,7 @@
             box-shadow: 0 0 25px #00ffff;
         }
 
-
         /* ROBOT CONTROL */
-
         .robot-control {
             min-height: 100vh;
             padding: 110px 20px 60px;
@@ -153,9 +147,7 @@
             margin-right: 8px;
         }
 
-
         /* BLUETOOTH BUTTON */
-
         .connect-btn {
             margin-bottom: 35px;
             padding: 13px 28px;
@@ -175,9 +167,7 @@
             box-shadow: 0 0 20px #00ffff;
         }
 
-
         /* CONTROL BUTTONS */
-
         .controls {
             display: flex;
             flex-direction: column;
@@ -217,9 +207,7 @@
             box-shadow: 0 0 20px #ff3333;
         }
 
-
         /* COMMAND DISPLAY */
-
         .command-box {
             margin: 35px auto 0;
             padding: 15px;
@@ -230,9 +218,7 @@
             background: #080808;
         }
 
-
         /* SPEED SECTION */
-
         .speed-section {
             min-height: 100vh;
             padding: 110px 20px 70px;
@@ -253,21 +239,16 @@
             margin: 0 auto;
             border-radius: 50%;
             position: relative;
-
-            background:
-                radial-gradient(
-                    circle,
-                    #111 0%,
-                    #080808 55%,
-                    #020202 100%
-                );
-
+            background: radial-gradient(
+                circle,
+                #111 0%,
+                #080808 55%,
+                #020202 100%
+            );
             border: 5px solid #181818;
-
             box-shadow:
                 0 0 20px #00ffff,
                 inset 0 0 35px #00ffff;
-
             overflow: hidden;
         }
 
@@ -277,15 +258,11 @@
             height: 270px;
             left: 25px;
             top: 25px;
-
             border-radius: 50%;
-
             border: 4px solid #222;
-
             border-top-color: #00ffff;
             border-left-color: #00ffff;
             border-right-color: #7b5cff;
-
             transform: rotate(-45deg);
         }
 
@@ -304,40 +281,27 @@
             width: 5px;
             height: 125px;
             background: #00ffff;
-
             left: calc(50% - 2.5px);
             top: 42px;
-
             transform-origin: 50% 123px;
             transform: rotate(-120deg);
-
             border-radius: 5px;
-
             box-shadow:
                 0 0 10px #00ffff,
                 0 0 20px #00ffff;
-
             transition: transform 0.25s ease-out;
-
             z-index: 5;
         }
 
         .needle-center {
             position: absolute;
-
             width: 25px;
             height: 25px;
-
             background: #00ffff;
-
             border-radius: 50%;
-
             left: calc(50% - 12.5px);
             top: calc(50% - 12.5px);
-
-            box-shadow:
-                0 0 15px #00ffff;
-
+            box-shadow: 0 0 15px #00ffff;
             z-index: 10;
         }
 
@@ -353,9 +317,7 @@
             font-size: 45px;
             font-weight: bold;
             color: #ffffff;
-
-            text-shadow:
-                0 0 10px #00ffff;
+            text-shadow: 0 0 10px #00ffff;
         }
 
         .kmh {
@@ -389,9 +351,7 @@
             accent-color: #00ffff;
         }
 
-
         /* BATTERY SECTION */
-
         .battery-section {
             min-height: 100vh;
             padding: 110px 20px 70px;
@@ -413,8 +373,7 @@
             background: #080808;
             border: 1px solid #222;
             border-radius: 20px;
-            box-shadow:
-                0 0 25px rgba(0, 255, 255, 0.15);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
         }
 
         .battery-icon {
@@ -425,8 +384,7 @@
             margin: 20px auto 30px;
             position: relative;
             padding: 8px;
-            box-shadow:
-                0 0 20px #00ffff;
+            box-shadow: 0 0 20px #00ffff;
         }
 
         .battery-icon::after {
@@ -444,14 +402,9 @@
         .battery-level {
             height: 100%;
             width: 80%;
-            background: linear-gradient(
-                90deg,
-                #00ffff,
-                #7b5cff
-            );
+            background: linear-gradient(90deg, #00ffff, #7b5cff);
             border-radius: 7px;
-            box-shadow:
-                0 0 15px #00ffff;
+            box-shadow: 0 0 15px #00ffff;
             transition: width 0.4s ease;
         }
 
@@ -494,11 +447,8 @@
             accent-color: #00ffff;
         }
 
-
         /* MOBILE */
-
         @media (max-width: 600px) {
-
             .navbar {
                 padding: 0 15px;
             }
@@ -562,244 +512,237 @@
             }
         }
 
-    
-/* ===== FINAL RESPONSIVE FIX ===== */
+        /* FINAL RESPONSIVE FIX */
+        html, body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
 
-html, body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
+        section {
+            width: 100%;
+            max-width: 100%;
+        }
 
-section {
-    width: 100%;
-    max-width: 100%;
-}
+        .navbar {
+            padding: 0 30px;
+        }
 
-.navbar {
-    padding: 0 30px;
-}
+        .nav-links {
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
 
-.nav-links {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
+        /* Tablet */
+        @media (max-width: 900px) {
+            .navbar {
+                padding: 0 20px;
+            }
 
-/* Tablet */
-@media (max-width: 900px) {
+            .logo-text {
+                font-size: 23px;
+                letter-spacing: 4px;
+            }
 
-    .navbar {
-        padding: 0 20px;
-    }
+            .nav-links {
+                gap: 18px;
+            }
 
-    .logo-text {
-        font-size: 23px;
-        letter-spacing: 4px;
-    }
+            .nav-links a {
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
 
-    .nav-links {
-        gap: 18px;
-    }
+            .welcome h1 {
+                font-size: 58px;
+            }
 
-    .nav-links a {
-        font-size: 12px;
-        letter-spacing: 1px;
-    }
+            .speedometer {
+                width: min(330px, 82vw);
+                height: min(330px, 82vw);
+            }
 
-    .welcome h1 {
-        font-size: 58px;
-    }
+            .speed-arc {
+                width: calc(min(330px, 82vw) - 60px);
+                height: calc(min(330px, 82vw) - 60px);
+                left: 25px;
+                top: 25px;
+            }
+        }
 
-    .speedometer {
-        width: min(330px, 82vw);
-        height: min(330px, 82vw);
-    }
+        /* Mobile */
+        @media (max-width: 600px) {
+            .navbar {
+                height: auto;
+                min-height: 64px;
+                padding: 10px 12px;
+                gap: 8px;
+            }
 
-    .speed-arc {
-        width: calc(min(330px, 82vw) - 60px);
-        height: calc(min(330px, 82vw) - 60px);
-        left: 25px;
-        top: 25px;
-    }
-}
+            .logo-text {
+                flex-shrink: 0;
+                font-size: 17px;
+                letter-spacing: 2px;
+            }
 
-/* Mobile */
-@media (max-width: 600px) {
+            .nav-links {
+                margin-left: auto;
+                gap: 8px 10px;
+                align-items: center;
+            }
 
-    .navbar {
-        height: auto;
-        min-height: 64px;
-        padding: 10px 12px;
-        gap: 8px;
-    }
+            .nav-links a {
+                font-size: 8px;
+                letter-spacing: .5px;
+                white-space: nowrap;
+            }
 
-    .logo-text {
-        flex-shrink: 0;
-        font-size: 17px;
-        letter-spacing: 2px;
-    }
+            .welcome {
+                min-height: 100svh;
+                padding: 90px 16px 35px;
+            }
 
-    .nav-links {
-        margin-left: auto;
-        gap: 8px 10px;
-        align-items: center;
-    }
+            .welcome h1 {
+                font-size: clamp(38px, 13vw, 52px);
+                letter-spacing: 5px;
+            }
 
-    .nav-links a {
-        font-size: 8px;
-        letter-spacing: .5px;
-        white-space: nowrap;
-    }
+            .welcome h2 {
+                font-size: 21px;
+            }
 
-    .welcome {
-        min-height: 100svh;
-        padding: 90px 16px 35px;
-    }
+            .welcome p {
+                font-size: 15px;
+                max-width: 92%;
+            }
 
-    .welcome h1 {
-        font-size: clamp(38px, 13vw, 52px);
-        letter-spacing: 5px;
-    }
+            .button {
+                padding: 13px 22px;
+                font-size: 13px;
+            }
 
-    .welcome h2 {
-        font-size: 21px;
-    }
+            .robot-control,
+            .speed-section,
+            .battery-section {
+                min-height: auto;
+                padding: 90px 14px 70px;
+            }
 
-    .welcome p {
-        font-size: 15px;
-        max-width: 92%;
-    }
+            .robot-control h2,
+            .speed-section h2,
+            .battery-section h2 {
+                font-size: 21px;
+                letter-spacing: 2px;
+            }
 
-    .button {
-        padding: 13px 22px;
-        font-size: 13px;
-    }
+            .status {
+                font-size: 13px;
+            }
 
-    .robot-control,
-    .speed-section,
-    .battery-section {
-        min-height: auto;
-        padding: 90px 14px 70px;
-    }
+            .connect-btn {
+                padding: 12px 20px;
+                font-size: 12px;
+                margin-bottom: 25px;
+            }
 
-    .robot-control h2,
-    .speed-section h2,
-    .battery-section h2 {
-        font-size: 21px;
-        letter-spacing: 2px;
-    }
+            .controls button {
+                width: 62px;
+                height: 62px;
+                margin: 5px;
+                font-size: 23px;
+            }
 
-    .status {
-        font-size: 13px;
-    }
+            .command-box {
+                width: min(350px, 92vw);
+                font-size: 13px;
+            }
 
-    .connect-btn {
-        padding: 12px 20px;
-        font-size: 12px;
-        margin-bottom: 25px;
-    }
+            .speedometer {
+                width: min(310px, 82vw);
+                height: min(310px, 82vw);
+            }
 
-    .controls button {
-        width: 62px;
-        height: 62px;
-        margin: 5px;
-        font-size: 23px;
-    }
+            .speed-arc {
+                width: calc(min(310px, 82vw) - 56px);
+                height: calc(min(310px, 82vw) - 56px);
+                left: 24px;
+                top: 24px;
+            }
 
-    .command-box {
-        width: min(350px, 92vw);
-        font-size: 13px;
-    }
+            .live-speed {
+                top: 48%;
+            }
 
-    .speedometer {
-        width: min(310px, 82vw);
-        height: min(310px, 82vw);
-    }
+            .live-speed-number {
+                font-size: clamp(34px, 11vw, 45px);
+            }
 
-    .speed-arc {
-        width: calc(min(310px, 82vw) - 56px);
-        height: calc(min(310px, 82vw) - 56px);
-        left: 24px;
-        top: 24px;
-    }
+            .speed-control {
+                width: min(400px, 92vw);
+                margin-top: 35px;
+            }
 
-    .live-speed {
-        top: 48%;
-    }
+            .battery-box {
+                width: min(320px, 92vw);
+                padding: 28px 18px;
+            }
 
-    .live-speed-number {
-        font-size: clamp(34px, 11vw, 45px);
-    }
+            .battery-icon {
+                width: min(210px, 68vw);
+                height: 90px;
+            }
 
-    .speed-control {
-        width: min(400px, 92vw);
-        margin-top: 35px;
-    }
+            .battery-percent {
+                font-size: 45px;
+            }
+        }
 
-    .battery-box {
-        width: min(320px, 92vw);
-        padding: 28px 18px;
-    }
+        /* Small phones */
+        @media (max-width: 420px) {
+            .navbar {
+                align-items: flex-start;
+            }
 
-    .battery-icon {
-        width: min(210px, 68vw);
-        height: 90px;
-    }
+            .logo-text {
+                font-size: 15px;
+                letter-spacing: 1.5px;
+                padding-top: 2px;
+            }
 
-    .battery-percent {
-        font-size: 45px;
-    }
-}
+            .nav-links {
+                gap: 6px 8px;
+            }
 
-/* Small phones */
-@media (max-width: 420px) {
+            .nav-links a {
+                font-size: 7px;
+            }
 
-    .navbar {
-        align-items: flex-start;
-    }
+            .welcome {
+                padding-top: 105px;
+            }
 
-    .logo-text {
-        font-size: 15px;
-        letter-spacing: 1.5px;
-        padding-top: 2px;
-    }
+            .controls button {
+                width: 56px;
+                height: 56px;
+                margin: 4px;
+            }
 
-    .nav-links {
-        gap: 6px 8px;
-    }
+            .speedometer {
+                width: min(285px, 80vw);
+                height: min(285px, 80vw);
+            }
 
-    .nav-links a {
-        font-size: 7px;
-    }
+            .speed-arc {
+                width: calc(min(285px, 80vw) - 50px);
+                height: calc(min(285px, 80vw) - 50px);
+                left: 21px;
+                top: 21px;
+            }
 
-    .welcome {
-        padding-top: 105px;
-    }
-
-    .controls button {
-        width: 56px;
-        height: 56px;
-        margin: 4px;
-    }
-
-    .speedometer {
-        width: min(285px, 80vw);
-        height: min(285px, 80vw);
-    }
-
-    .speed-arc {
-        width: calc(min(285px, 80vw) - 50px);
-        height: calc(min(285px, 80vw) - 50px);
-        left: 21px;
-        top: 21px;
-    }
-
-    .battery-box {
-        width: 94vw;
-    }
-}
-
-    
+            .battery-box {
+                width: 94vw;
+            }
+        }
 
         /* AI PRACTICALS */
         .ai-practicals {
@@ -808,17 +751,20 @@ section {
             background: #050505;
             text-align: center;
         }
+
         .ai-practicals h2 {
             color: #00ffff;
             font-size: 30px;
             letter-spacing: 4px;
             margin-bottom: 12px;
         }
+
         .ai-intro {
             color: #888;
             margin: 0 auto 35px;
             line-height: 1.6;
         }
+
         .practical-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -827,6 +773,7 @@ section {
             margin: 0 auto;
             text-align: left;
         }
+
         .practical-card {
             background: #0d1117;
             border: 1px solid #173b43;
@@ -834,17 +781,20 @@ section {
             padding: 22px;
             transition: .25s;
         }
+
         .practical-card:hover {
             border-color: #00ffff;
             transform: translateY(-4px);
             box-shadow: 0 0 18px #00ffff22;
         }
+
         .practical-number {
             color: #00ffff;
             font-size: 12px;
             letter-spacing: 2px;
             margin-bottom: 10px;
         }
+
         .practical-card h3 {
             color: #eee;
             font-size: 17px;
@@ -852,7 +802,13 @@ section {
             min-height: 50px;
             margin-bottom: 18px;
         }
-        .pdf-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+        .pdf-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
         .pdf-actions a {
             display: inline-block;
             padding: 10px 14px;
@@ -863,16 +819,40 @@ section {
             font-size: 12px;
             transition: .2s;
         }
-        .pdf-actions a:hover { background: #00ffff; color: #000; }
-        @media (max-width: 700px) {
-            .navbar { height: auto; min-height: 75px; padding: 14px 18px; flex-wrap: wrap; gap: 12px; }
-            .nav-links { width: 100%; margin-left: 0; gap: 14px; flex-wrap: wrap; }
-            .nav-links a { font-size: 11px; }
-            .ai-practicals { padding: 145px 18px 55px; }
-            .ai-practicals h2 { font-size: 24px; }
+
+        .pdf-actions a:hover {
+            background: #00ffff;
+            color: #000;
         }
 
+        @media (max-width: 700px) {
+            .navbar {
+                height: auto;
+                min-height: 75px;
+                padding: 14px 18px;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
 
+            .nav-links {
+                width: 100%;
+                margin-left: 0;
+                gap: 14px;
+                flex-wrap: wrap;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .ai-practicals {
+                padding: 145px 18px 55px;
+            }
+
+            .ai-practicals h2 {
+                font-size: 24px;
+            }
+        }
 
         /* TOTAL WEBSITE VISITORS */
         .site-footer {
@@ -922,45 +902,27 @@ section {
             margin-top: 12px;
             letter-spacing: 1px;
         }
-
     </style>
 </head>
 
-
 <body>
 
-
     <!-- NAVBAR -->
-
     <div class="navbar">
-
-        <div class="logo-text">
-            GOLDSNKE
-        </div>
+        <div class="logo-text">GOLDSNKE</div>
 
         <div class="nav-links">
-
             <a href="#home">HOME</a>
-
             <a href="#robot">ROBOT</a>
-
             <a href="#speed">SPEED</a>
-
             <a href="#battery">BATTERY</a>
-
             <a href="#ai-practicals">AI PRACTICALS</a>
-
         </div>
-
     </div>
 
-
     <!-- WELCOME -->
-
     <section class="welcome" id="home">
-
         <h1>WELCOME</h1>
-
         <h2>Welcome to GOLDSNKE</h2>
 
         <p>
@@ -971,161 +933,80 @@ section {
         <a href="#robot" class="button">
             ENTER ROBOT CONTROL
         </a>
-
     </section>
 
-
     <!-- ROBOT CONTROL -->
-
     <section class="robot-control" id="robot">
-
         <h2>🤖 ROBOT CONTROL</h2>
 
         <div class="status">
-
             <span class="status-dot"></span>
-
             <span id="bluetoothStatus">
                 BLUETOOTH: DISCONNECTED
             </span>
-
         </div>
-
 
         <button class="connect-btn" onclick="connectBluetooth()">
             🔵 CONNECT BLUETOOTH
         </button>
 
-
         <div class="controls">
-
             <div>
-
-                <button onclick="sendCommand('FORWARD')">
-                    ⬆️
-                </button>
-
+                <button onclick="sendCommand('FORWARD')">⬆️</button>
             </div>
 
-
             <div>
+                <button onclick="sendCommand('LEFT')">⬅️</button>
 
-                <button onclick="sendCommand('LEFT')">
-                    ⬅️
-                </button>
-
-                <button
-                    class="stop"
-                    onclick="sendCommand('STOP')">
+                <button class="stop" onclick="sendCommand('STOP')">
                     ⏹
                 </button>
 
-                <button onclick="sendCommand('RIGHT')">
-                    ➡️
-                </button>
-
+                <button onclick="sendCommand('RIGHT')">➡️</button>
             </div>
-
 
             <div>
-
-                <button onclick="sendCommand('BACKWARD')">
-                    ⬇️
-                </button>
-
+                <button onclick="sendCommand('BACKWARD')">⬇️</button>
             </div>
-
         </div>
-
 
         <div class="command-box">
-
             COMMAND:
-            <span id="command">
-                READY
-            </span>
-
+            <span id="command">READY</span>
         </div>
-
     </section>
 
-
     <!-- SPEED -->
-
     <section class="speed-section" id="speed">
-
         <h2>⚡ LIVE SPEED</h2>
 
-
         <div class="speedometer">
-
             <div class="speed-arc"></div>
 
-            <div class="tick"
-                 style="transform: rotate(-120deg);"></div>
+            <div class="tick" style="transform: rotate(-120deg);"></div>
+            <div class="tick" style="transform: rotate(-90deg);"></div>
+            <div class="tick" style="transform: rotate(-60deg);"></div>
+            <div class="tick" style="transform: rotate(-30deg);"></div>
+            <div class="tick" style="transform: rotate(0deg);"></div>
+            <div class="tick" style="transform: rotate(30deg);"></div>
+            <div class="tick" style="transform: rotate(60deg);"></div>
+            <div class="tick" style="transform: rotate(90deg);"></div>
+            <div class="tick" style="transform: rotate(120deg);"></div>
 
-            <div class="tick"
-                 style="transform: rotate(-90deg);"></div>
-
-            <div class="tick"
-                 style="transform: rotate(-60deg);"></div>
-
-            <div class="tick"
-                 style="transform: rotate(-30deg);"></div>
-
-            <div class="tick"
-                 style="transform: rotate(0deg);"></div>
-
-            <div class="tick"
-                 style="transform: rotate(30deg);"></div>
-
-            <div class="tick"
-                 style="transform: rotate(60deg);"></div>
-
-            <div class="tick"
-                 style="transform: rotate(90deg);"></div>
-
-            <div class="tick"
-                 style="transform: rotate(120deg);"></div>
-
-
-            <div
-                class="needle"
-                id="speedNeedle">
-            </div>
-
-
+            <div class="needle" id="speedNeedle"></div>
             <div class="needle-center"></div>
 
-
             <div class="live-speed">
-
-                <div
-                    class="live-speed-number"
-                    id="liveSpeed">
-                    0
-                </div>
-
-                <div class="kmh">
-                    KM/H
-                </div>
-
-                <div class="live-text">
-                    LIVE SPEED
-                </div>
-
+                <div class="live-speed-number" id="liveSpeed">0</div>
+                <div class="kmh">KM/H</div>
+                <div class="live-text">LIVE SPEED</div>
             </div>
-
         </div>
 
-
         <div class="speed-control">
-
             <label>
                 ⚡ SPEED:
-                <span id="speedValue">
-                    0
-                </span>%
+                <span id="speedValue">0</span>%
             </label>
 
             <input
@@ -1136,56 +1017,35 @@ section {
                 value="0"
                 oninput="changeSpeed(this.value)"
             >
-
         </div>
-
     </section>
 
-
     <!-- BATTERY -->
-
     <section class="battery-section" id="battery">
-
         <h2>🔋 BATTERY STATUS</h2>
 
-
         <div class="battery-box">
-
             <div class="battery-icon">
-
-                <div
-                    class="battery-level"
-                    id="batteryLevel">
-                </div>
-
+                <div class="battery-level" id="batteryLevel"></div>
             </div>
 
-
-            <div
-                class="battery-percent"
-                id="batteryPercent">
+            <div class="battery-percent" id="batteryPercent">
                 80%
             </div>
-
 
             <div class="battery-label">
                 BATTERY LEVEL
             </div>
 
-
             <div class="charging-status">
-
                 <span class="charging-dot"></span>
 
                 <span id="chargingText">
                     POWER AVAILABLE
                 </span>
-
             </div>
 
-
             <div class="battery-slider">
-
                 <input
                     type="range"
                     min="0"
@@ -1193,106 +1053,59 @@ section {
                     value="80"
                     oninput="changeBattery(this.value)"
                 >
-
             </div>
-
         </div>
-
     </section>
 
-
     <!-- JAVASCRIPT -->
-
     <script>
-
-
         /* ROBOT COMMAND */
-
         function sendCommand(command) {
+            document.getElementById("command").textContent = command;
 
-            document.getElementById("command").textContent =
-                command;
-
-            console.log(
-                "Robot Command:",
-                command
-            );
+            console.log("Robot Command:", command);
         }
 
-
         /* SPEED */
-
         function changeSpeed(value) {
+            document.getElementById("speedValue").textContent = value;
 
-            document.getElementById("speedValue").textContent =
-                value;
+            let speed = Math.round((value / 100) * 120);
 
-            let speed =
-                Math.round(
-                    (value / 100) * 120
-                );
+            document.getElementById("liveSpeed").textContent = speed;
 
-            document.getElementById("liveSpeed").textContent =
-                speed;
-
-            let angle =
-                -120 + (value / 100) * 240;
+            let angle = -120 + (value / 100) * 240;
 
             document.getElementById("speedNeedle").style.transform =
                 "rotate(" + angle + "deg)";
 
-            console.log(
-                "Live Speed:",
-                speed,
-                "km/h"
-            );
+            console.log("Live Speed:", speed, "km/h");
         }
 
-
         /* BATTERY */
-
         function changeBattery(value) {
+            document.getElementById("batteryPercent").textContent =
+                value + "%";
 
-            document.getElementById("batteryPercent")
-                .textContent = value + "%";
-
-            document.getElementById("batteryLevel")
-                .style.width = value + "%";
-
+            document.getElementById("batteryLevel").style.width =
+                value + "%";
 
             let chargingText =
                 document.getElementById("chargingText");
 
-
             if (value <= 20) {
-
-                chargingText.textContent =
-                    "LOW BATTERY";
-
+                chargingText.textContent = "LOW BATTERY";
             } else if (value <= 50) {
-
-                chargingText.textContent =
-                    "BATTERY AVAILABLE";
-
+                chargingText.textContent = "BATTERY AVAILABLE";
             } else {
-
-                chargingText.textContent =
-                    "POWER AVAILABLE";
+                chargingText.textContent = "POWER AVAILABLE";
             }
-
         }
 
-
         /* BLUETOOTH */
-
         function connectBluetooth() {
-
             if (!navigator.bluetooth) {
-
-                alert(
-                    "Bluetooth is not supported in this browser."
-                );
-
+                alert("Bluetooth is not supported in this browser.");
                 return;
             }
 
@@ -1300,59 +1113,149 @@ section {
                 "Bluetooth connection will be connected when the robot hardware arrives."
             );
 
-            document.getElementById(
-                "bluetoothStatus"
-            ).textContent =
+            document.getElementById("bluetoothStatus").textContent =
                 "BLUETOOTH: READY TO CONNECT";
         }
-
-
     </script>
-
-
 
     <!-- AI PRACTICALS -->
     <section class="ai-practicals" id="ai-practicals">
         <h2>📚 AI PRACTICALS</h2>
-        <p class="ai-intro">Third Year Computer Engineering · Artificial Intelligence Lab<br>View or download your practical reports below.</p>
+
+        <p class="ai-intro">
+            Third Year Computer Engineering · Artificial Intelligence Lab
+            <br>
+            View or download your practical reports below.
+        </p>
+
         <div class="practical-grid">
-            <article class="practical-card"><div class="practical-number">PRACTICAL 01</div><h3>Simple Reflex Agent – Vacuum Cleaner</h3><div class="pdf-actions"><a href="pdfs/practical-01-vacuum-cleaner.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-01-vacuum-cleaner.pdf" download>DOWNLOAD</a></div></article>
-            <article class="practical-card"><div class="practical-number">PRACTICAL 02</div><h3>Tower of Hanoi – BFS</h3><div class="pdf-actions"><a href="pdfs/practical-02-tower-of-hanoi-bfs.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-02-tower-of-hanoi-bfs.pdf" download>DOWNLOAD</a></div></article>
-            <article class="practical-card"><div class="practical-number">PRACTICAL 03</div><h3>Adversarial Search – Alpha-Beta Pruning</h3><div class="pdf-actions"><a href="pdfs/practical-03-alpha-beta-pruning.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-03-alpha-beta-pruning.pdf" download>DOWNLOAD</a></div></article>
-            <article class="practical-card"><div class="practical-number">PRACTICAL 04</div><h3>A* Search Algorithm – 8 Puzzle Problem</h3><div class="pdf-actions"><a href="pdfs/practical-04-a-star-8-puzzle.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-04-a-star-8-puzzle.pdf" download>DOWNLOAD</a></div></article>
-            <article class="practical-card"><div class="practical-number">PRACTICAL 05</div><h3>Intelligent Number-Guessing Agent</h3><div class="pdf-actions"><a href="pdfs/practical-05-number-guessing.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-05-number-guessing.pdf" download>DOWNLOAD</a></div></article>
-            <article class="practical-card"><div class="practical-number">PRACTICAL 06</div><h3>Simple Chatbot – Predefined Rules and Pattern Matching</h3><div class="pdf-actions"><a href="pdfs/practical-06-chatbot.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-06-chatbot.pdf" download>DOWNLOAD</a></div></article>
-            <article class="practical-card"><div class="practical-number">PRACTICAL 07</div><h3>DFS – Water Jug Problem Solving</h3><div class="pdf-actions"><a href="pdfs/practical-07-dfs-water-jug.pdf" target="_blank" rel="noopener">VIEW PDF</a><a href="pdfs/practical-07-dfs-water-jug.pdf" download>DOWNLOAD</a></div></article>
+
+            <article class="practical-card">
+                <div class="practical-number">PRACTICAL 01</div>
+                <h3>Simple Reflex Agent – Vacuum Cleaner</h3>
+                <div class="pdf-actions">
+                    <a href="pdfs/practical-01-vacuum-cleaner.pdf" target="_blank" rel="noopener">VIEW PDF</a>
+                    <a href="pdfs/practical-01-vacuum-cleaner.pdf" download>DOWNLOAD</a>
+                </div>
+            </article>
+
+            <article class="practical-card">
+                <div class="practical-number">PRACTICAL 02</div>
+                <h3>Tower of Hanoi – BFS</h3>
+                <div class="pdf-actions">
+                    <a href="pdfs/practical-02-tower-of-hanoi-bfs.pdf" target="_blank" rel="noopener">VIEW PDF</a>
+                    <a href="pdfs/practical-02-tower-of-hanoi-bfs.pdf" download>DOWNLOAD</a>
+                </div>
+            </article>
+
+            <article class="practical-card">
+                <div class="practical-number">PRACTICAL 03</div>
+                <h3>Adversarial Search – Alpha-Beta Pruning</h3>
+                <div class="pdf-actions">
+                    <a href="pdfs/practical-03-alpha-beta-pruning.pdf" target="_blank" rel="noopener">VIEW PDF</a>
+                    <a href="pdfs/practical-03-alpha-beta-pruning.pdf" download>DOWNLOAD</a>
+                </div>
+            </article>
+
+            <article class="practical-card">
+                <div class="practical-number">PRACTICAL 04</div>
+                <h3>A* Search Algorithm – 8 Puzzle Problem</h3>
+                <div class="pdf-actions">
+                    <a href="pdfs/practical-04-a-star-8-puzzle.pdf" target="_blank" rel="noopener">VIEW PDF</a>
+                    <a href="pdfs/practical-04-a-star-8-puzzle.pdf" download>DOWNLOAD</a>
+                </div>
+            </article>
+
+            <article class="practical-card">
+                <div class="practical-number">PRACTICAL 05</div>
+                <h3>Intelligent Number-Guessing Agent</h3>
+                <div class="pdf-actions">
+                    <a href="pdfs/practical-05-number-guessing.pdf" target="_blank" rel="noopener">VIEW PDF</a>
+                    <a href="pdfs/practical-05-number-guessing.pdf" download>DOWNLOAD</a>
+                </div>
+            </article>
+
+            <article class="practical-card">
+                <div class="practical-number">PRACTICAL 06</div>
+                <h3>Simple Chatbot – Predefined Rules and Pattern Matching</h3>
+                <div class="pdf-actions">
+                    <a href="pdfs/practical-06-chatbot.pdf" target="_blank" rel="noopener">VIEW PDF</a>
+                    <a href="pdfs/practical-06-chatbot.pdf" download>DOWNLOAD</a>
+                </div>
+            </article>
+
+            <article class="practical-card">
+                <div class="practical-number">PRACTICAL 07</div>
+                <h3>DFS – Water Jug Problem Solving</h3>
+                <div class="pdf-actions">
+                    <a href="pdfs/practical-07-dfs-water-jug.pdf" target="_blank" rel="noopener">VIEW PDF</a>
+                    <a href="pdfs/practical-07-dfs-water-jug.pdf" download>DOWNLOAD</a>
+                </div>
+            </article>
+
         </div>
     </section>
 
-
     <!-- TOTAL WEBSITE VISITORS -->
     <footer class="site-footer">
-        <div class="visitor-counter-title">TOTAL WEBSITE VISITS</div>
+        <div class="visitor-counter-title">
+            TOTAL WEBSITE VISITS
+        </div>
+
         <div class="visitor-counter-box">
             <span class="visitor-counter-icon" aria-hidden="true">👁</span>
-            <div class="counterapi" aria-label="Total website visits">Loading...</div>
-        </div>
-        <div class="visitor-counter-note">THANK YOU FOR VISITING GOLDSNKE</div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const counter = new Counter({
-        workspace: 'mahesh-bangars-team-6141'
-    });
 
-    counter.up('first-counter-6141')
-        .then(result => {
-            document.querySelector('.counterapi').textContent = result.value;
-        })
-        .catch(error => {
-            console.error('Counter error:', error);
-            document.querySelector('.counterapi').textContent = 'Unavailable';
+            <div class="counterapi" aria-label="Total website visits">
+                Loading...
+            </div>
+        </div>
+
+        <div class="visitor-counter-note">
+            THANK YOU FOR VISITING GOLDSNKE
+        </div>
+    </footer>
+
+    <!-- COUNTER API -->
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+
+            const display = document.querySelector('.counterapi');
+
+            if (!display) return;
+
+            try {
+                if (typeof Counter === 'undefined') {
+                    throw new Error('CounterAPI library did not load.');
+                }
+
+                const counter = new Counter({
+                    workspace: 'mahesh-bangars-team-6141',
+                    debug: true
+                });
+
+                const result = await counter.up('first-counter-6141');
+
+                const count = result && (
+                    result.value ??
+                    result.data?.up_count
+                );
+
+                if (count === undefined || count === null) {
+                    console.error('Unexpected CounterAPI response:', result);
+                    display.textContent = 'Count unavailable';
+                } else {
+                    display.textContent = count;
+                }
+
+            } catch (error) {
+                console.error('CounterAPI error:', error);
+                display.textContent = 'Counter unavailable';
+            }
+
         });
-});
-</script>
+    </script>
 
 </body>
 </html>
