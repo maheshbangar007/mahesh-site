@@ -1336,7 +1336,23 @@ section {
         </div>
         <div class="visitor-counter-note">THANK YOU FOR VISITING GOLDSNKE</div>
     </footer>
-    <script src="https://counterapi.com/c.js?ns=goldsnke.netlify.app" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const counter = new Counter({
+        workspace: 'mahesh-bangars-team-6141'
+    });
+
+    counter.up('first-counter-6141')
+        .then(result => {
+            document.querySelector('.counterapi').textContent = result.value;
+        })
+        .catch(error => {
+            console.error('Counter error:', error);
+            document.querySelector('.counterapi').textContent = 'Unavailable';
+        });
+});
+</script>
 
 </body>
 </html>
